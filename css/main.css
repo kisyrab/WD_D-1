@@ -1,0 +1,367 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li, ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{color: #333; background-color: #fff; font-family: "고딕"Arial, Helvetica, sans-serif;}
+
+
+#wrap{}
+
+#up{
+    width: 100%;
+    height: 850px;
+    /* background-color: #ddd; */
+    display: flex;
+}
+
+.logo{
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px dotted #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a{
+    display: block;
+    width: 90%;
+}
+.logo a img{
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    width: 180px;
+    height: 500px;
+    margin-top: 20px;
+}
+.main>li{
+    border-bottom: 2px solid rgb(9, 131, 9);
+    
+}
+.main>li>a{
+    display: block;
+    text-transform: uppercase;
+    color: darkgreen;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    padding-left: 10px;
+}
+.main>li:hover>a{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+    .sub{
+        display: none;
+    }
+    .sub li{}
+    .sub li a{
+        display: block;
+        color: darkgreen;
+        font-weight: 800;
+        height: 30px;
+        line-height: 30px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .sub li a:hover{
+        background-color: rgb(200, 219, 200);
+    }
+
+
+.up_left{
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+}
+.spot_menu{
+    width: 150px;
+    margin: 190px auto;
+    text-align: center;
+}
+.spot_menu a{
+    font-size: 12px;
+    text-decoration: underline;
+    padding: 0 10px;
+    color: #999;
+}
+
+.spot_menu a:hover{
+    color: darkgreen;
+    font-weight: 900;
+}
+
+.spot_menu a:first-child{
+    border-right: 1px solid #999;
+}
+
+
+.up_right{
+    width: calc(100% - 200px);
+    height: 100%;
+    /* background-color: #999; */
+    position: relative; /* link positioning */
+}
+
+.img_slide{
+    height: 400px;
+    /* background-color: #999; */
+    position: relative; /* top_move */
+    overflow: hidden;
+}
+
+.top_move{
+    position: absolute;
+    width: 100%;
+    left: 0; top: 0;
+}
+.top_move li{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.top_move li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.top_move li a img{
+    width: 100%;
+    position: absolute;
+    z-index: 30;
+}
+.top_move li a .title{
+    position: absolute;
+    z-index: 31;
+    font-size: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 1px 0 darkgreen;
+    color: #fff;
+    font-weight: 900;
+    font-family: serif;
+}
+
+
+
+
+
+
+
+.banner{
+    height: 200px;
+    /* background-color: #666; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner_inner{
+    width: 95%; height: 90%;
+    border-top: 1px solid darkgreen;
+    border-bottom: 1px solid darkgreen;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.b_1{
+    flex:  0 1 200px;
+    margin-right: 20px;
+}
+.b_1 img{
+    width: 100%;
+
+}
+
+.b_2{
+    flex: 1 1 800px;
+}
+.b_2 h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.b_2 p{}
+
+.b_3{}
+.b_3 img{}
+
+
+
+.contents{
+    height: 250px;
+    /* background-color: #ddd; */
+    padding: 20px;
+    position: relative;
+}
+
+.contents h2{
+    font-size: 16px;
+    width: 150px; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border:  1px solid darkseagreen;
+    background-color: #fff;
+    position: absolute;
+    top: 20px; left: 20px;
+    font-weight: 900;
+    z-index: 60;
+    cursor: pointer;
+    color: darkgreen;
+}
+.contents h2.on{
+    border-bottom-color:rgb(222, 240, 222);
+    background-color: rgb(222, 240, 222);
+    /* 활성화 */
+}
+
+.contents ul{
+    position: absolute;
+    width: calc(100% - 40px);
+    border: 1px solid darkseagreen;
+    background-color: rgb(222, 240, 222);
+    top: 49px; left: 20px;
+    height: calc(100% - 69px);
+
+}
+
+.gallery{}
+.gallery h2{left: 175px;}
+.gallery ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    /* display: none; */
+}
+.gallery ul li{
+    width: 17%;
+    overflow: hidden;
+
+}
+.gallery ul li a{
+    display: block;
+}
+.gallery ul li a img{
+    width: 100%;
+}
+
+.notice{}
+.notice ul{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.notice ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #bbb;
+}
+.notice ul li a{
+    width: 80%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.notice ul li span{}
+
+
+.link{
+    height: 300px;
+    width: 100px;
+    position: absolute;
+    right: 0; top: 0;
+    background-color: #fff;
+    border: 1px solid darkgreen;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.link a{
+    border-bottom: 1px dotted #ddd;
+    text-align: center;
+}
+.link a img{
+    width: 70px; height: 70px;
+    display: block;
+}
+.link a span{
+    display: block;
+    font-size: 12px;
+}
+
+
+
+
+
+
+#footer{
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(169, 184, 169); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.f_logo{
+    width: 200px;
+    padding-left: 10px;
+}
+.copy{
+    padding-left: 20px;
+    width: calc(100% - 500px);
+}
+.sns{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pop{
+    width: 500px;
+    height: 400px;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    display: none;
+}
+
+.pop h3{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 2;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.pop p{
+    padding: 30px;
+    text-align: justify;
+    line-height: 3;
+}
+.pop button{
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+}
